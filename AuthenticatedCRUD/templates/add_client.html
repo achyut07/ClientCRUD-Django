@@ -1,0 +1,61 @@
+  {% load static %}
+  {% load crispy_forms_tags %}
+
+  <!doctype html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Clients Info</title>
+      <link rel="stylesheet" href="{% static '/css/bootstrap.css' %}">
+      <link rel="stylesheet" href="{% static '/css/main.css' %}">
+      <link rel="stylesheet" href="{% static '/css/font-awesome.min.css' %}">
+  </head>
+  <body>
+      <div class="header" style="background-color:rgb(206, 182, 201); margin-bottom: 70px;">
+          <span style="font-size:40px;"><strong>ClientHouse</strong></span>
+      </div>
+      <div class="small_div">
+          <div class="container">
+              <br>
+              <h2>Add Client</h2>
+              <hr>
+              <form action="/create">
+                  {% csrf_token %}
+                  {{ form|crispy }}
+                  <input class="btn btn-success" type="submit" value="Add">
+              </form>
+              <br>
+          </div>
+      </div>
+  </body>
+  </html>
+
+  <!-- <label class="form-group" for="client_name">Name: </label>
+  <input class="form-control" type="text" name="client_name"><br>
+
+  <label class="form-group" for="client_company">Company: </label>
+  <input class="form-control" type="text" name="client_company"><br>
+
+  <label class="form-group" for="company_location">Location </label>
+  <input class="form-control" type="text" name="company_location"><br>
+
+  <label class="form-group" for="company_logo">Logo </label>
+  <input class="form-control" type="file" name="company_logo" accept="image/* "><br>
+
+  <label class="form-group" for="contactno">Contactno </label>
+  <input class="form-control" type="text" name="contactno"><br>
+
+  <label class="form-group" for="prject_name">Project </label>
+  <input class="form-control" type="text" name="project_name"><br>
+
+  <label class="form-group" for="tools">Tools </label>
+  <input class="form-control" type="text" name="tools"><br>
+
+  <label class="form-group" for="offer_date">Offer Date </label>
+  <input class="form-control" type="text" name="offer_date"><br>
+
+  <label class="form-group" for="deadline">Deadline </label>
+  <input class="form-control" type="text" name="deadline"><br>
+  <br> -->

@@ -1,0 +1,62 @@
+{% load crispy_forms_tags %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+
+<head>
+  <!-- Mobile Specific Meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Favicon-->
+  <link rel="shortcut icon" href="{% static 'fav.png' %}">
+  <!-- Author Meta -->
+  <meta name="author" content="codepixer">
+  <!-- Meta Description -->
+  <meta name="description" content="">
+  <!-- Meta Keyword -->
+  <meta name="keywords" content="">
+  <!-- meta character set -->
+  <meta charset="UTF-8">
+  <!-- Site Title -->
+  <title>Registration </title>
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+  <!--
+    CSS
+    ============================================= -->
+  <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+
+</head>
+
+<body>
+  <div class="header" style="background-color:rgb(206, 182, 201); margin-bottom: 100px;">
+    <span style="font-size:40px;"><strong>ClientHouse</strong></span>
+
+  </div>
+  <div class="container-fluid">
+
+    <div class="row">
+      <div class="col-sm-4"></div>
+      <div class="loginform col-sm-4 col-sm-offset-4">
+        <h3>User Registration</h3><br><br>
+        <form class="form-horizontal" role="form" method="post" action="#" enctype="multipart/form-data">
+          {% csrf_token %}
+          {{form|crispy}}
+          <div class="form-group">
+            <div class="col-sm-offset-4 col-sm-10">
+              <button type="submit" class="btn btn-success">Submit</button>
+            </div>
+          </div>
+          <p>Already have an account? &nbsp;<span><a href="{% url 'crud:login_user' %}">Login here</a></span></p>
+      </div>
+    </div>
+    </form>
+  </div>
+  <div class="col-sm-4"></div>
+  </div>
+
+  <br><br><br><br>
+</body>
+
+</html>
