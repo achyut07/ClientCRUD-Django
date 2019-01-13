@@ -73,7 +73,7 @@ class User(AbstractBaseUser, PermissionsMixin):
             'unique': 'User with this email already exists.',
         },
     )
-    # phonenumber = models.CharField( 
+    # phonenumber = models.CharField(
     #     max_length=15,
     #     unique=True,
     #     validators=[PhoneNumberValidator()],
@@ -82,7 +82,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     #     },
 
 
-    # ) 
+    # )
     first_name = models.CharField(max_length=40, null=True)
     last_name = models.CharField(max_length=40, null=True)
     is_active = models.BooleanField(default=True)
@@ -122,5 +122,3 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     class Meta:
         db_table = "users"
-
-    

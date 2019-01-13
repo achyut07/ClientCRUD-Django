@@ -71,7 +71,7 @@ ul, ol {
   text-align: center;
   padding: 12px;
   text-decoration: none;
-  font-size: 18px; 
+  font-size: 18px;
   line-height: 25px;
   border-radius: 4px;
 }
@@ -99,7 +99,7 @@ ul, ol {
   float: right;
 }
 
-/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */ 
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
 @media screen and (max-width: 500px) {
   .header a {
     float: none;
@@ -110,8 +110,3 @@ ul, ol {
     float: none;
   }
 }
-
-
-
-
-

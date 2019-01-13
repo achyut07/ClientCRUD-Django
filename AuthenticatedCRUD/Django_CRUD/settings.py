@@ -144,6 +144,6 @@ LOGOUT_REDIRECT_URL = '/'
 
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'youremail'  #your email #dont put your information while putting on github or others public places
-EMAIL_HOST_PASSWORD = 'yourpassword' #your password
+EMAIL_HOST_USER = 'anjan.sarathi328@gmail.com'  #your email #dont put your information while putting on github or others public places
+EMAIL_HOST_PASSWORD = '9867120866' #your password
 EMAIL_PORT = 587
